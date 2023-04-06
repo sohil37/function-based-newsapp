@@ -11,6 +11,7 @@ const News = (props) => {
   const [loaderProgress, setLoaderProgress] = useState(0);
 
   const getNewsArticles = async () => {
+    props.setActiveCategory(props.category);
     setLoaderProgress(20);
     let newsApiUrl = "";
     if (props.category) {
